@@ -1,0 +1,21 @@
+import {useState, useRef} from 'react'
+import TimerChallenge from './TimerChallenge.jsx'
+
+export default function Player() {
+  const playerName = useRef()
+  const [name, setName] = useState('unknown entity');
+
+  function hanldeClick(){
+    setName(playerName.current.value)
+  }
+
+  return (
+    <section id="player">
+      <h2>Welcome {name}</h2>
+      <p>
+        <input ref={playerName} type="text" />
+        <button onClick={hanldeClick}>Set Name</button>
+      </p>
+    </section>
+  );
+}
