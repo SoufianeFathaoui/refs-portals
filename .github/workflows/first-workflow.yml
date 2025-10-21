@@ -1,10 +1,17 @@
 name: firt workflow
 on: push
 jobs:
-    pushing:
+    first-job:
         runs-on: ubuntu-latest
         steps:
             - name: pushing the code
               run: echo 'Pushing the code...'
             - name: ending pushing
               run: echo 'Your code is pushed.'
+    secend-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step
+              run: echo 'This is the first step.'
+            - name: secent step
+              run: echo 'This is the secend step'
