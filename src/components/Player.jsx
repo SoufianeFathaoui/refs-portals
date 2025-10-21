@@ -8,6 +8,7 @@ export default function Player() {
     setName(playerName.current.value)
   }
 
+  
   return (
     <section id="player">
       <h2>Welcome {name}</h2>
